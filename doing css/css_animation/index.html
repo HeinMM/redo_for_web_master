@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .background-image{
+            overflow: auto;
+            position: relative;
+        }
+        .background-image::before{
+            content: "";
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            animation: thunder 1s linear 1.8s 1 alternate;
+            position: fixed;
+            z-index: 1;
+            filter: blur(5px);
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            z-index: 10;
+        }
+        .img{
+            transition: 1s;
+            animation: toRight;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+            z-index: 10;
+        }
+        .img:hover{
+            filter: contrast(150%);
+        }
+        .text{
+            color: white;
+            width: 600px;
+            animation: toLeft 1.5s linear 0s 1 alternate;
+        }
+        .text h1{
+            animation: toLeft 1.5s;
+            margin-bottom: 18px;
+        }
+        .text p{
+            animation: toLeft 2s alternate;
+        }
+        .thunder{
+            width: 100px;
+            position: fixed;
+            margin: auto;
+            bottom: 100px;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            animation: shake 0.3s infinite alternate , hide 18s linear 0s 1 alternate;
+            
+        }
+        @keyframes thunder {
+            from{
+                background-image: url(images/thunder.jpg);
+                background-size: cover;
+                filter: blur(20px);
+            }
+            to{
+                background-color: black;
+            }
+        }
+        @keyframes thunder-image {
+            from{
+                filter: contrast(150%);
+            }
+            to{
+                filter: contrast(100%);
+            }
+        }
+        @keyframes toRight {
+            from{
+                transform: translateX(-700px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes toLeft {
+            from{
+                transform: translateX(700px);
+            }
+            to{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes shake{
+            from{
+                transform: scale(1.2);
+            }
+            to{
+                transform: scale(1);
+            }
+        }
+        @keyframes hide{
+            from{
+               z-index: -1;
+            }
+            to{
+                z-index: 10;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <div class="main">
+            <img src="images/9.jpeg" alt="" class="img">
+            <div class="text">
+                <h1>Thor</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quaerat necessitatibus tempora quibusdam ab repellendus maiores praesentium repellat reprehenderit eius. Delectus laborum, consectetur doloremque maiores nam sit animi voluptatibus ipsa.</p>
+            </div>
+        </div>
+        
+        <svg class="thunder" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
+            <desc>Created with Fabric.js 1.7.22</desc>
+            <defs>
+            </defs>
+            <g transform="translate(128 128) scale(0.5 0.5)" style="">
+                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(-255.15 -255.15000000000006) scale(5.67 5.67)" >
+                <polygon points="71.43,35.12 50.46,39.15 54.52,0 32.06,46.25 42.64,50.54 35.48,90 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,123,227); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+                <polygon points="54.52,0 34.48,46.53 48.22,44.15 35.48,90 39.54,50.85 18.57,54.88 " style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,103,190); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
+            </g>
+            </g>
+            </svg>
+    </div>
+    
+</body>
+</html>

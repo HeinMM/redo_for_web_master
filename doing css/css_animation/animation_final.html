@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Small Project</title>
+    <style>
+        .room {
+            width: 600px;
+            height: 500px;
+            background-image: url(fa/Capture.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+            margin: 100px auto;
+            position: relative;
+        }
+        .couple{
+            position: absolute;
+            top: 290px;
+            left: 165px;
+        }
+
+        .boy {
+            width: 100px;
+            height: 100px;
+            animation: toleft 2s linear 4.5s 1 ;
+        }
+
+        .girl {
+            width: 100px;
+            height: 100px;
+            animation: toright 2s linear 4.5s 1 ;
+        }
+        .knife{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 500px;
+            left: 170px;
+            animation: slice 4s linear 0s 1 alternate;
+        }
+        @keyframes slice {
+            0%{
+                top: 500px;
+            }
+            30%{
+                top: 290px;
+            }
+           40%{
+                transform: rotate(60deg);
+                top: 290px;
+            }
+            50%{
+                transform: rotate(0deg);
+                top: 290px;
+            }
+            60%{
+                transform: rotate(60deg);
+                top: 290px;
+            }
+            70%{
+                transform: rotate(0deg);
+                top: 290px;
+            }
+            80%{
+                transform: rotate(60deg);
+                top: 290px;
+            }
+            100%{
+                transform: rotate(0deg);
+                top: 500px;
+            }
+
+        }
+
+        @keyframes toleft {
+            from{
+                transform: translate(0px);
+            }
+            to{
+                transform: translate(-100px);
+            }
+        }
+        @keyframes toright {
+             from{
+                transform: translate(0px);
+            }
+            to{
+                transform: translate(100px);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="room">
+        <div class="couple">
+            <img src="fa/boy.png" alt="" class="boy">
+            <img src="fa/girl.png" alt="" class="girl">
+        </div>
+        <img src="fa/knife.png" alt="" class="knife">
+    </div>
+</body>
+
+</html>

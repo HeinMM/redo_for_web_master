@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poppins:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: yellowgreen;
+    font-family:'Nanum Gothic','Noto Sans KR', sans-serif;
+}
+.box{
+    background-color: yellowgreen;
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.info{
+    width: 50%;
+}
+.info-title{
+ color: white;
+}
+.info-descripton{
+    font-size: 15px;
+    margin: 12px 0;
+    color: white;
+}
+.info-place{
+    color: white;
+}
+.current-place{
+    color: white;
+}
+.map svg{
+    stroke: black;
+    stroke-opacity: 0.1;
+    fill: white;
+    
+}
+.map svg path{
+    transition: 2s;
+    background-color: aqua;
+}
+.map svg path:hover{
+    fill: blue;
+    
+}

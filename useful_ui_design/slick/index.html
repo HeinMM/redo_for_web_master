@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="../slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="boot/css/bootstrap.min.css" />
+    <style>
+      .img-fluid {
+        width: 300px;
+        height: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <div class="slide my-5">
+            <img src="../../images/9.jpeg" class="img-fluid mx-2" alt="" />
+            <img src="../../images/8.jpeg" class="img-fluid mx-2" alt="" />
+            <img src="../../images/7.jpeg" class="img-fluid mx-2" alt="" />
+            <img src="../../images/6.jpeg" class="img-fluid mx-2" alt="" />
+            <img src="../../images/5.jpeg" class="img-fluid mx-2" alt="" />
+            <img src="../../images/4.jpeg" class="img-fluid mx-2" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="boot/js/bootstrap.min.js"></script>
+    <script src="../slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(".slide").slick({
+       infinite: true,
+  slidesToShow: 2,
+  slidesToScroll: 3,
+   responsive: [
+    {
+      breakpoint: 3000,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+      });
+    </script>
+  </body>
+</html>

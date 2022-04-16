@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
+}
+.display{
+    color: #ffffff;
+    font-size: 60px;
+    text-align: right;
+    padding: 10px 5px;
+    height: 100px;
+}
+.calc{
+    width: 390px;
+    margin: 100px auto;
+}
+/* .keypad{
+    width: 390px;
+    margin: auto;
+} */
+.key{
+    background-color: #333333;
+    color: white;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+.key:active{
+    background-color: #33333390;
+}
+.zero{
+    width: 190px;
+    border-radius: 90px;
+}
+tr:first-child td .key{
+    background-color: #a5a5a5;
+    color: black;
+}
+tr:first-child td .key:active{
+    background-color: #a5a5a590;
+    color: black;
+}
+tr td:last-child .key{
+    background-color: #ffa45c;
+    color: white;
+}
+tr td:last-child .key:active{
+    background-color: #ffa45c90;
+    color: white;
+}

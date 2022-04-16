@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            
+           
+        }
+        h1{
+            color: white;
+        }
+        .news{
+           width: 90%;
+           
+           margin: 100px auto;
+           columns: 2 300px;
+           column-gap: 10px;
+           column-fill: auto;
+        }
+        .card{
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .img{
+            width: 100%;
+        }
+        .title{
+            color: black;
+        }
+        .author{
+            color: black;
+        }
+        .description{
+            color: black;
+            background-color: wheat;
+            height: 150px;
+            overflow: hidden;
+        }
+        .read-more{
+            text-decoration: none;
+            color: whitesmoke;
+        }
+        .btn-design{
+            width: 180px;
+            height: 40px;
+            background-color: black;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            box-shadow: 0 0 15px rgba(58, 57, 57, 0.3)
+        }
+    </style>
+</head>
+<body>
+    <h1>Global News</h1>
+    <div class="news">
+       <div class="btn-design">
+
+       </div>
+    </div>
+
+    <script src="new.js"></script>
+    <script>
+        console.log(data);
+        let artical = data.articles;
+        let news = document.querySelector(".news");
+
+        artical.forEach((element,index) => {
+            news.innerHTML += `
+        <div class="card">
+            <img class="img" src="${element.urlToImage}" alt="">
+            <h4 class="title">${element.title}</h4>
+            <small class="author">${element.author}</small>
+            <p class="description">${element.description}</p>
+            <div class="btn-design">
+                <a href="${element.url}" class="read-more">Read More</a>
+            </div>
+           
+        </div>`;
+        });
+    </script>
+</body>
+</html>

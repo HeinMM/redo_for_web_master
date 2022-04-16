@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid New</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid red;
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <h4>Global case</h4>
+    <table>
+      <tbody class="tb"></tbody>
+    </table>
+
+    <h4>Global case</h4>
+    <table>
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Country</td>
+                <td>TotalConfirmed</td>
+                <td>TotalDeaths</td>
+            </tr>
+        </thead>
+        <tbody id="ctb">
+
+        </tbody>
+    </table>
+
+    <script src="covid.js"></script>
+    <script>
+      let global = data.Global;
+      let tb = document.querySelector(".tb");
+    
+      let country = data.Countries;
+      let ctb = document.getElementById("ctb");
+      for (let x in global) {
+        tb.innerHTML += `
+              <tr>
+                    <td>${x}</td>  
+                    <td>${global[x]}</td>            
+                </tr>`;
+      }
+      country.forEach((element,index) => {
+        ctb.innerHTML += `
+              <tr>
+                    <td>${index+1}</td>  
+                    <td>${element.Country}</td>  
+                    <td>${element.TotalConfirmed}</td>
+                    <td>${element.TotalDeaths}</td>             
+                </tr>`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Open+Sans:wght@400;500&family=Roboto:wght@100;300;400&display=swap');
+:root{
+    --primary : #2d88ff;
+    --dark : #18191a;
+    --sime-dark : #242526;
+    --sof-dark : #3a3b3c;
+    --danger : #f02849;
+    --success : #44b960;
+    --warning : #dda728;
+    --text : #b7b9bd;
+    --text-light : white;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text);
+}
+
+body{
+    background-color: var(--dark);
+}
+.nav{
+    background-color: var(--sime-dark);
+    display: flex;
+}
+
+/* left */
+.left{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-box{
+    display: flex;
+    padding: 10px;
+   
+}
+.logo{
+    width: 70px;
+    margin-right: 10px;
+}
+.search-box{
+    background-color: var(--sof-dark);
+    border-radius: 100px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+.feather-search{
+    margin-top: 3px;
+    margin-right: 10px;
+}
+.search-input{
+    color: var(--text);
+    background-color: var(--sof-dark);
+    border: none;
+    font-size: 20px;
+    width: 100%;
+}
+.search-input:focus{
+    outline: none;
+}
+
+/*  center*/
+.center{
+    width: 50%;
+}
+.center-box{
+    display: flex;
+    justify-content: center;
+}
+.center-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    padding: 10px;
+    margin: 0 5px;
+    border: 10px solid var(--sime-dark);
+  
+    border-left: none;
+    border-right: none;
+    position: relative;
+    transition: 0.5s;
+}
+.center-link:hover{
+    background-color: var(--sof-dark);
+    border-radius: 15px ;
+}
+.center-link.active{
+    border-bottom: 5px solid var(--primary);
+    
+}
+.center-link.active:hover{
+    background-color: var(--sime-dark);
+    border-radius: 0px ;
+}
+.center-link.active .center-icon{
+    color: var(--primary);
+}
+.center-icon{
+    font-size: 30px;
+}
+.center-link .noti{
+    background-color: var(--danger);
+    padding: 3px 5px;
+    border-radius: 10px;
+    font-size: 10px;
+    position: absolute;
+    top: 10px;
+    left: 58px;
+    color: var(--text-light);
+    font-weight: 900px;
+}
+
+/* right */
+.right{
+    width: 25%;
+}
+.right-box{
+ display: flex;
+ justify-content: flex-end;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.profile:hover{
+  
+    background-color: var(--sof-dark);
+    
+}
+.profile-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.profile-text{
+    color: var(--text-light);
+    padding: 5px;
+    font-weight: bold;
+}
+.right-noti-box{
+    display: flex;
+}
+.right-noti{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sof-dark);
+    border-radius: 50%;
+    margin: 20px 5px;
+}
+
+/* fb-body */
+
+.fb-body{
+ display: flex;
+}
+.left-aside{
+    width: 25%;
+}
+.news-feed{
+    width: 50%;
+}
+
+/* myday */
+.myday-list{
+   
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+}
+.myday-items{
+    width: 20%;
+    position: relative;
+    margin-right: 10px;
+}
+.myday{
+    width: 100%;
+    height: 270px;
+
+}
+.myday-img{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+}
+.myday-owner{
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+     top: 15px;
+    left: 15px;    
+}
+.myday-owner-img{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.scroll-myday{
+    width: 80px;
+    height: 80px;
+    background-color: var(--sime-dark);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 200px;
+    right: 620px;
+    /* transform: translate(1230px,-160px); */
+}
+.add-icon{
+   font-size: 30px;
+   color: var(--text-light);
+}
+.myday-text{
+    position: absolute;
+    z-index: 1;
+    color: var(--text-light);
+    bottom: 5px;
+    left: 15px;
+    font-size: 18px;
+}
+
+
+.add-post{
+    margin-top: 50px;
+    border-radius: 20px;
+    background-color: var(--sime-dark);
+    padding: 10px 20px;
+}
+.add-post-box{
+
+}
+.add-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-text-profile{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.add-text-box{
+    background-color: var(--sof-dark);
+    border-radius: 100px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+.divider{
+    margin-top: 10px;
+    border-bottom: 0.5px solid var(--sof-dark);
+}
+.add-file{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.add-file div{
+    margin-top: 10px;
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.add-file div:hover{
+    background-color: var(--sof-dark);
+}
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.emoji{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video i{
+    margin-right: 5px;
+    color: var(--danger);
+    font-size: 25px;
+}
+.photo i{
+    margin-right: 5px;
+    color: var(--success);
+    font-size: 25px;
+}
+.emoji i{
+    margin-right: 5px;
+    color: var(--warning);
+    font-size: 25px;
+}
+.post-list{
+
+}
+
+
+.chat-box{
+    width: 25%;
+}

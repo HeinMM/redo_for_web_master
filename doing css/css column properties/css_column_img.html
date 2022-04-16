@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css3 Column Image</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Gothic&family=Noto+Sans+KR&family=Poppins:wght@300&display=swap');
+         *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Bebas Neue', cursive;
+        }
+        .heading{
+            color: #03A9F4;
+            margin-bottom: 30px auto;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 3em;
+        }
+        .gallery{
+            columns:3 300px;
+            column-gap: 30px;
+            width: 1000px;
+            margin: auto;
+        }
+        .gallery-img{
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+        .gallery-img:hover{
+            filter: contrast(150%);
+        }
+        @media screen and (max-width: 1024px) {
+            .gallery{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .gallery{
+                columns: 2 150px;
+                column-gap: 5px;
+            }
+            .gallery-img{
+                margin-bottom: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heading"><span style="color: red;">Marvel</span> Wallpaper</div>
+    <div class="gallery">
+        <img src="images/9.jpeg" alt="" class="gallery-img">
+        <img src="images/1.jpeg" alt="" class="gallery-img">
+        <img src="images/2.jpeg" alt="" class="gallery-img">
+        <img src="images/3.jpeg" alt="" class="gallery-img">
+        <img src="images/4.jpeg" alt="" class="gallery-img">
+        <img src="images/5.jpeg" alt="" class="gallery-img">
+        <img src="images/6.jpeg" alt="" class="gallery-img">
+        <img src="images/7.jpeg" alt="" class="gallery-img">
+        <img src="images/8.jpeg" alt="" class="gallery-img">
+        
+        <img src="images/10.jpeg" alt="" class="gallery-img">
+    </div>
+</body>
+</html>

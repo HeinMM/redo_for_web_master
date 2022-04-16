@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      img {
+        width: 100px;
+        height: 120px;
+      }
+      #upload {
+        display: none;
+      }
+      #uploader {
+        width: 900px;
+        margin: 10px;
+        background-color: gainsboro;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      #uploader:hover {
+        background-color: rgb(215, 218, 212);
+      }
+      #uploader img {
+        width: 50px;
+        height: 50px;
+      }
+      button {
+        width: 120px;
+        height: 40px;
+        color: green;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 10px;
+      }
+      button:hover {
+        background-color: rgb(215, 218, 212);
+      }
+      #gallery {
+        width: 900px;
+        columns: 3 250px;
+        margin: 50px auto;
+      }
+      .gallery-img {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div id="uploader">
+        <img src="upload-img.png" alt="" />
+      </div>
+
+      <input type="file" id="upload" accept="image/jpeg,image/png" multiple />
+      <div>
+        <button>upload</button>
+      </div>
+
+      <!-- <img src="" id="preview" alt="" /> -->
+      <div id="gallery"></div>
+    </div>
+
+    <script>
+      let uploader = document.getElementById("uploader");
+      let defUploaderPhoto = "upload-img.png";
+      let upload = document.getElementById("upload");
+      let gallery = document.getElementById("gallery");
+      let preview = document.getElementById("preview");
+
+      function showingInGallery(src) {
+        let img = new Image();
+        img.src = src;
+        img.classList = "gallery-img";
+        gallery.appendChild(img);
+      }
+
+      uploader.addEventListener("click", function () {
+        upload.click();
+      });
+
+      upload.addEventListener("change", function () {
+        let photo = this.files;
+       
+        for (let index = 0; index < photo.length; index++) {
+            const reader = new FileReader();
+          reader.addEventListener(
+            "load",
+            function () {
+              // preview.src = reader.result;
+              showingInGallery(reader.result);
+            },
+            false
+          );
+          reader.readAsDataURL(photo[index]);
+        }
+      });
+    </script>
+  </body>
+</html>

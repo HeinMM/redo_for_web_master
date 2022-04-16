@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Gothic&family=Noto+Sans+KR&family=Poppins:wght@300&display=swap');
+        html{
+            scroll-behavior: smooth;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+            font-family: 'Bebas Neue', cursive;
+
+        }
+        .home{
+            height: 100vh;
+            background-image: url("images/1.jpg");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 0;
+        }
+        .home-content{
+            width: 500px;
+            color: white;
+            margin-left: 200px;
+            font-size: large;
+            z-index: 2;
+        }
+        .home::before{
+            content: "";
+            height: 50px;
+            position: absolute;
+            background: #FC466B;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            backdrop-filter: blur(20px);
+            z-index: 1;
+        }
+        .up{
+            width: 50px;
+            height: 50px;
+            background-color: #d5d5d5;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .up-icon{
+            
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1 class="home-content-title">Hello Testing</h1>
+                <p class="home-content-para"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat ex placeat quidem earum reprehenderit error 
+                    voluptate necessitatibus officiis amet, odit provident 
+                    quis, officia tenetur optio cumque molestiae. Molestiae,
+                    ullam perferendis.
+                </p>
+        </div>
+        
+    </section>
+
+    <section style="height: 100vh;">
+        
+    </section>
+    <a href="#home" class="up">
+        <svg class="up-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M54.63 246.6L192 109.3l137.4 137.4C335.6 252.9 343.8 256 352 256s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25l-160-160c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25S42.13 259.1 54.63 246.6zM214.6 233.4c-12.5-12.5-32.75-12.5-45.25 0l-160 160c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0L192 301.3l137.4 137.4C335.6 444.9 343.8 448 352 448s16.38-3.125 22.62-9.375c12.5-12.5 12.5-32.75 0-45.25L214.6 233.4z"/></svg>
+    </a>
+
+</body>
+</html>

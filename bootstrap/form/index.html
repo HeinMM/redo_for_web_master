@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="boot/css/bootstrap.min.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 w-75">
+          <form action="" class="my-5 border border-primary p-2 rounded w-100">
+            <div class="input-group justify-content-between">
+              <input type="text" class="form-control">
+              <button class="btn btn-primary">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <div class="card mt-5">
+            <div class="card-header">Register Form</div>
+            <div class="card-body">
+              <form action="">
+                <div class="mb-3">
+                  <label for="uname" class="form-label">Your Name</label>
+                  <input
+                    name="username"
+                    id="uname"
+                    type="text"
+                    class="form-control is-invalid"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="pw" class="form-label">Password</label>
+                  <input
+                    name="password"
+                    id="pw"
+                    type="password"
+                    class="form-control is-valid"
+                  />
+                </div>
+
+                <select
+                  class="form-select mb-3"
+                  aria-label="Default select example"
+                >
+                  <option selected>Open this select menu</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+
+                <div class="input-group">
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="inputGroupFile04"
+                    aria-describedby="inputGroupFileAddon04"
+                    aria-label="Upload"
+                  />
+                </div>
+
+                <hr />
+
+                <button class="btn btn-primary float-end">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="boot/js/bootstrap.min.js"></script>
+    <script></script>
+  </body>
+</html>

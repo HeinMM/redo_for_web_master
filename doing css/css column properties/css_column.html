@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colum Property</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Gothic&family=Noto+Sans+KR&family=Poppins:wght@300&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Bebas Neue', cursive;
+        }
+        body{
+            padding: 50px;
+        }
+        .heading{
+            color: #03A9F4;
+            margin-bottom: 30px;
+        }
+        .paragraph{
+            color: #333333;
+            column-count: 3;
+            column-width: 300px;
+            column-rule: 1px solid black;
+            column-gap: 50px;
+        }
+        .paragraph p{
+            margin-bottom: 20px;
+            text-align: justify;
+            line-height: 2;
+        }
+        .full{
+            column-span: all;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+        <h1 class="heading">Css3 Column Property</h1>
+        <div class="paragraph">
+            <p class="full">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quibusdam maiores est eos quam asperiores fuga optio consectetur perferendis, nam quidem nobis tenetur debitis expedita cumque culpa magni temporibus repellat.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit consequuntur nisi nostrum? Aut sequi laborum nihil est sint porro dolor rerum quisquam placeat neque, illo amet accusamus illum aliquam dolore!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quibusdam maiores est eos quam asperiores fuga optio consectetur perferendis, nam quidem nobis tenetur debitis expedita cumque culpa magni temporibus repellat.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit consequuntur nisi nostrum? Aut sequi laborum nihil est sint porro dolor rerum quisquam placeat neque, illo amet accusamus illum aliquam dolore!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quibusdam maiores est eos quam asperiores fuga optio consectetur perferendis, nam quidem nobis tenetur debitis expedita cumque culpa magni temporibus repellat.
+            </p>
+            <p class="full">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit consequuntur nisi nostrum? Aut sequi laborum nihil est sint porro dolor rerum quisquam placeat neque, illo amet accusamus illum aliquam dolore!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quibusdam maiores est eos quam asperiores fuga optio consectetur perferendis, nam quidem nobis tenetur debitis expedita cumque culpa magni temporibus repellat.
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit consequuntur nisi nostrum? Aut sequi laborum nihil est sint porro dolor rerum quisquam placeat neque, illo amet accusamus illum aliquam dolore!
+            </p>
+        </div>
+</body>
+</html>

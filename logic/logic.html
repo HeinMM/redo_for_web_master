@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+        }
+        .detectArea{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <img id="builb" src="pic_bulboff.gif" alt="" srcset="">
+    <br>
+    <div class="">
+        <button onclick="lightOn()">Light On</button>
+        <button onclick="lightOff()">Light Off</button>
+    </div>
+    <hr>
+    <div class="">
+        <button onclick="toggle()">
+            Touch Button
+        </button>
+    </div>
+<hr>
+    <div class="">
+        <button onclick="toggle()">Switch 1</button>
+        <button onclick="toggle()">Switch 2</button>
+    </div>
+    <hr>
+    <div class="detectArea">
+        DetectArea
+    </div>
+
+
+
+    <script>
+        let myBulb = document.getElementById("builb");
+        function lightOn(){
+            myBulb.setAttribute("src","pic_bulbon.gif");
+        }
+
+        function lightOff(){
+            myBulb.setAttribute("src","pic_bulboff.gif");
+        }
+
+        function toggle(){
+            if (myBulb.getAttribute("src")=="pic_bulbon.gif") {
+                lightOff();
+            }else{
+                lightOn();
+            }
+        }
+        document.querySelector(".detectArea").addEventListener("mouseover",function(){
+            lightOn();
+        });
+        document.querySelector(".detectArea").addEventListener("mouseout",function(){
+            lightOff();
+        });
+    </script>
+</body>
+</html>

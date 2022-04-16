@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="boot/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../VenoBox-master/dist/venobox.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex flex-wrap">
+            <div class="my-3">
+              <a class="my-link" data-maxwidth="100%"  href="../../images/7.jpeg">
+                <img src="../../images/7.jpeg" class="img-fluid" alt=""
+              /></a>
+            </div>
+            <div class="my-3 mx-3">
+              <a class="my-link"  href="../../images/6.jpeg">
+                <img src="../../images/6.jpeg" class="img-fluid" alt=""
+              /></a>
+            </div>
+            <div class="my-3 mx-3">
+              <a class="my-link"  href="../../images/8.jpeg">
+                <img src="../../images/8.jpeg" class="img-fluid" alt=""
+              /></a>
+            </div>
+            <div class="my-3 mx-3">
+              <a class="my-link"  href="../../images/9.jpeg">
+                <img src="../../images/9.jpeg" class="img-fluid" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="boot/js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="../../VenoBox-master/dist/venobox.min.js"></script>
+    <script>
+      new VenoBox();
+      new VenoBox({
+        selector: ".my-link",
+        
+      });
+    </script>
+  </body>
+</html>

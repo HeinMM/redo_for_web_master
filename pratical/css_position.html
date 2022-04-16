@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .one{
+            background-color: aqua;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            z-index: 1;
+            top: 300px;
+        }
+        .two{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 100px;
+            right: 100px;
+            z-index: 2;
+        }
+        .three{
+            background-color: blue;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            z-index: 0;
+            top: 300px;
+        }
+        .four{
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            right: 100px;
+            z-index: 0;
+        }
+        .six{
+            border: 1px solid black;
+            width: 400px;
+            height: 200px;
+            position: relative;
+        }
+        .test{
+            height: 50px;
+            width: 50px;
+            background-color: brown;
+            position: absolute;
+            right: 50px;
+            bottom: 10px;
+        }
+        .extra{
+            height: 4000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four">
+        <p>up</p>
+    </div>
+    <div class="six">
+        <div class="test"></div>
+    </div>
+    <div class="extra"></div>
+</body>
+</html>

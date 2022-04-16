@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .key{
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <h1 class="display-box"></h1>
+
+        <div class="keypad">
+
+        </div>
+    </div>
+
+    <script>
+        let operators = ["+","-","*","/","%","="];
+        let keyPad = document.querySelector(".keypad");
+        let displayBox = document.querySelector(".display-box");
+
+        for (let index = 0; index < 10; index++) {
+            keyPad.innerHTML += `<button class="key" onclick="showInDisplay(${index})">${index}</button>`;           
+        }
+        operators.forEach(element => {
+            if(element === '='){
+                keyPad.innerHTML += `<button class="key" onclick="calc()">${element}</button>`;
+            }else{
+                keyPad.innerHTML += `<button class="key" onclick="showInDisplay('${element}')">${element}</button>`;
+            }
+            
+        });
+
+        let showInDisplay = function(value){
+           return displayBox.innerText += value;
+        }
+
+        function calc(){
+            let result = eval(displayBox.innerText);
+            displayBox.innerText = result;
+        }
+
+
+    </script>
+</body>
+</html>

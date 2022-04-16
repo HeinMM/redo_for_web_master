@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="boot/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+    <section class="vh-100" id="one">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <h1 class="text-center wow animate__zoomIn">Section 1</h1>
+        </div>
+      </div>
+    </section>
+    <section class="vh-100 bg-black position-relative" id="two">
+            <div class="row position-absolute w-100 h-25 bottom-50 d-flex justify-content-around ">
+                <div class="card bg-secondary w-25 h-100 d-flex justify-content-center  text-center">
+                    <span class="text-light counter">123</span>
+                    <h5>People</h5>
+                </div>
+                <div class="card bg-secondary w-25 h-100 d-flex justify-content-center  text-center">
+                    <span class="text-light counter">332</span>
+                    <h5>View</h5>
+                </div>
+                <div class="card bg-secondary w-25 h-100 d-flex justify-content-center  text-center">
+                    <span class="text-light counter">432</span>
+                    <h5>Profit</h5>
+                </div>
+            </div>
+      </div>
+    </section>
+    <section class="vh-100" id="three">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <h1 class="text-center wow animate__zoomIn">Section 3</h1>
+        </div>
+      </div>
+    </section>
+    <section class="vh-100 bg-black" id="four">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <h1 class="text-center wow animate__zoomIn">Section 4</h1>
+        </div>
+      </div>
+    </section>
+    <section class="vh-100" id="five">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12">
+          <h1 class="text-center wow animate__zoomIn">Section 5</h1>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="boot/js/bootstrap.min.js"></script>
+    <script src="../../way_point_pg/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script>
+          $('.counter').counterUp({
+               delay: 10,
+                time: 1000
+            });
+       
+        let aa = $('#two').waypoint({
+            handler:function(){
+           
+           
+            console.log("Hit");
+            
+            $(".navbar").toggleClass("bg-light navbar-dark").toggleClass("bg-black navbar-light");
+            
+        },offset: '25%'
+        
+    });
+        let bb = $('#three').waypoint(function(){
+           
+            $(".navbar").toggleClass("bg-light navbar-dark").toggleClass("bg-black navbar-light");
+           
+        });
+         let cc = $('#four').waypoint(function(){
+           
+            $(".navbar").toggleClass("bg-light navbar-dark").toggleClass("bg-black navbar-light");
+        });
+         let dd = $('#five').waypoint(function(){
+           
+            $(".navbar").toggleClass("bg-light navbar-dark").toggleClass("bg-black navbar-light");
+        });
+    </script>
+  </body>
+</html>

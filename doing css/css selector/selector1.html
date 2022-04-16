@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+        .box{
+            width: 300px;
+            height: 100px;
+            background: pink;
+            border-radius: 15px;
+            position: relative;
+            
+        }
+        .box::before{
+            content: "";           
+            position: absolute;
+            background: black;
+            bottom: -48px;
+            border: 25px solid white;
+            border-top-color: pink;
+            left: 200px;
+        }
+        .text{
+           
+            position: absolute;
+            top: 25px;
+            left: 20px;
+        }
+        .text::after{
+            content: " stop";
+            color: red;
+        }
+        .text::before{
+            content: "go ";
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 class="text">Haha</h1>
+    </div>
+    
+</body>
+</html>

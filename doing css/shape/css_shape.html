@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+        }
+        .square{
+            width: 50px;
+            height: 50px;
+            border: 2px solid pink;
+        }
+        .square-rounded{
+            border-radius: 5px;
+        }
+        .rect{
+            width: 150px;
+            height: 50px;
+            border: 2px solid pink;
+        }
+        .circle{
+            width: 50px;
+            height: 50px;
+            border: 2px solid pink;
+            border-radius: 50%;
+            background: #ddd;
+        }
+        .img-circle{
+            width: 50px;
+            height: 50px;
+            border: 2px solid pink;
+            border-radius: 50%;
+            background: #ddd;
+        }
+        .triangle{
+            border: 50px solid white;
+            border-bottom-color:pink;
+            border-top: none;
+        }
+        .triangle-2{
+            border: 50px solid white;
+            border-bottom-color:pink;
+            border-right-color:pink;
+            
+        }
+        .env{
+            border: 50px solid #dfdfdf;
+            border-top-color: pink;
+            border-bottom-width: 10px;
+            border-radius: 5px;
+        }
+        .arrow{
+            width: 200px;
+            height: 60px;
+            background: grey;
+            position: absolute;
+            left: 150px;
+            z-index: 1;
+        }
+        .arrow::before{
+            content: "";
+            /* width: 50px;
+            height: 60px; */
+            background-color: black;
+            position: absolute;
+            left: -60px;
+            border: 31px solid gray;
+            border-left-color: white;
+            z-index: 0;
+        }
+        .arrow::after{
+            content: "";
+            /* width: 50px;
+            height: 60px; */
+            background-color: black;
+            position: absolute;
+            right: -20px;
+            border: 31px solid white;
+            border-left-color: grey;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Css Shapes</h1>
+    
+    <div class="square"></div>
+    <div class="square square-rounded"></div>
+    <div class="rect"></div>
+
+    <hr>
+
+    <div class="circle"></div>
+    <img class="img-circle" src="images/2.jpg"></img>
+
+    <hr>
+
+    <div class="triangle"></div>
+
+    <div class="triangle-2"></div>
+
+    <div class="env"></div>
+
+    <hr>
+
+    <div class="arrow"></div>
+</body>
+</html>

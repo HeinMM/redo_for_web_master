@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="test"></h1>
+    <br>
+    <h1 id="test2"></h1>
+    
+    <script src="js/jquery.min.js"></script>
+    <script>
+        document.getElementById("test").innerHTML = "Chnage by js";
+        $("#test2").html("change by jquery");
+        $("#test2").click(function () {
+            $(this).hide(1000,function () {
+                console.log("hide");
+            });
+        });
+    </script>
+</body>
+</html>
