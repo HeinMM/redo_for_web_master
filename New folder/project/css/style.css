@@ -8,14 +8,135 @@
 :root {
   --primary-soft: #f9f9f9;
 }
+
+
+
 .sidebar {
+  overflow: scroll;
 }
 
 .show-sidebar-btn {
   cursor: pointer;
 }
+.web-name{
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+}
 
-@media screen and (max-width: 780px) {
+.nav-menu{
+
+}
+.nav-menu ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-title{
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #7a787869;
+}
+.menu-item{
+  transition: 0.5s;
+}
+.menu-item:hover{
+  background-color: var(--primary-soft);
+  border-radius: 0.25rem;
+}
+.menu-item-link{
+  display: flex;
+  justify-content: space-between;
+  color: var(--dark);
+  padding: 10px;
+}
+.menu-item-link:hover{
+  text-decoration: none;
+  color: var(--dark);
+}
+.menu-item-link.active{
+  background-color: var(--primary);
+  color: white !important;
+}
+
+.menu-item-link span{
+
+}
+.menu-item-link i{
+ 
+}
+
+.menu-spacer{
+  padding: 10px 0;
+}
+.user-img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.header {
+  position: sticky;
+  top: 0.7rem;
+  z-index: 2000;
+}
+.content {
+  background-color: var(--primary-soft);
+  overflow: scroll;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) inset;
+}
+.card{
+  border: none;
+  
+}
+
+.status-card{
+  transition: 0.3s;
+  cursor: pointer;
+}
+.status-card:hover{
+  transform: scale(1.02);
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+.status-card:active{
+  transform: translateY(-3px);
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+.ov-img{
+  margin-left: -25px;
+}
+.item-carousel{
+  margin-top: -100px;
+}
+/* .item-card{
+  margin-top: -100px;
+} */
+.item-card-img{
+  width: 150px;
+  height: 200px;
+}
+.item-carousel-card{
+
+}
+.sub-list tr{
+  transition: 0.3s;
+  cursor: pointer;
+}
+.sub-list tr:active{
+  transform: scale(1.02);
+}
+
+.full-screen-card{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2005;
+  height: 100vh;
+  overflow: scroll;
+}
+
+@media screen and (max-width:810px) {
   .sidebar {
     position: fixed;
     width: 300px;
@@ -24,14 +145,12 @@
     background-color: white;
     margin-left: -100%;
   }
+  .item-carousel-card{
+    margin-top: 150px;
+  }
 }
 
-.content {
-  background-color: var(--primary-soft);
-  overflow: scroll;
-}
-.header {
-  position: sticky;
-  top: 0.7rem;
-  z-index: 2000;
-}
+
+
+
+
