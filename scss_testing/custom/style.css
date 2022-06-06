@@ -1,0 +1,11 @@
+.one {
+  background-color: blue;
+  color: pink;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=style.css.map */

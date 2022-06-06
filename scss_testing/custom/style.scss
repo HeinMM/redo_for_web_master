@@ -1,0 +1,17 @@
+$primary-color : blue;
+$sec-primary-color : pink;
+
+@mixin border($color,$radius) {
+    border: 2px solid $color ;
+    border-radius: $radius;
+}
+
+.one{
+    background-color: $primary-color;
+    color: $sec-primary-color;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    @include border(black,10px )
+}
